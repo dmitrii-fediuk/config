@@ -1,3 +1,6 @@
+! 2023-02-12
+! https://help.adblockplus.org/hc/en-us/articles/360062733293
+! https://adblockplus.org/filter-cheatsheet
 alanstorm.com##footer
 askubuntu.com,serverfault.com,stackexchange.com,stackoverflow.com,superuser.com##A[class*="-logo"]
 askubuntu.com,serverfault.com,stackexchange.com,stackoverflow.com,superuser.com##A[class*="-marketing-link"]
