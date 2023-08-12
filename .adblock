@@ -101,6 +101,10 @@ twitter.com##ASIDE[aria-label="Who to follow"]
 twitter.com##NAV[aria-label="Footer"]
 ! 2023-08-12 "Hide the «Trends for you» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/1
 twitter.com##SECTION[aria-labelledby="accessible-list-0"]
+! 2023-08-12
+! 1) "Hide the «People» section from Twitter search results": https://github.com/dmitrii-fediuk/config/issues/4
+! 2) https://help.adblockplus.org/hc/en-us/articles/360062733293#elemhide-emulation
+twitter.com#?#DIV[data-testid="cellInnerDiv"]:-abp-has(> div > div > div[data-testid="UserCell"])
 vc.ru##DIV[class="subsite-sidebar"]
 vedomosti.ru##HEADER
 vedomosti.ru##[class="article__metrics"]
