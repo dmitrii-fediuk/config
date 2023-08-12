@@ -97,16 +97,20 @@ trends.rbc.ru##DIV[class="navbar js-navbar"]
 trendyol.com##[class*="head-custom-banner"]
 ! 2023-08-12 "Hide the «Who to follow» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/2
 twitter.com##ASIDE[aria-label="Who to follow"]
-! 2023-08-12 "Hide the footer in Twitter": https://github.com/dmitrii-fediuk/config/issues/3
-twitter.com##NAV[aria-label="Footer"]
-! 2023-08-12 "Hide the «Trends for you» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/1
-twitter.com##SECTION[aria-labelledby="accessible-list-0"]
+! 2023-08-12
+! 1) "Hide the «Trends for you» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/1
+! 2) Another solution:
+!	twitter.com##SECTION[aria-labelledby="accessible-list-0"]
+! https://github.com/dmitrii-fediuk/config/blob/2023-08-12-1/.adblock#L102-L103
+twitter.com#?#DIV:-abp-has(> section[role="region"] > div[aria-label="Timeline: Trending now"])
 ! 2023-08-12
 ! 1) "Hide the «People» section from Twitter search results": https://github.com/dmitrii-fediuk/config/issues/4
 ! 2) https://help.adblockplus.org/hc/en-us/articles/360062733293#elemhide-emulation
 twitter.com#?#DIV[data-testid="cellInnerDiv"]:-abp-has(> div > div > div[data-testid="UserCell"])
 twitter.com#?#DIV[data-testid="cellInnerDiv"]:-abp-has(h2[role="heading"]:-abp-has(span:-abp-contains(People)))
 twitter.com#?#DIV[data-testid="cellInnerDiv"]:-abp-has(a[role="link"]:-abp-has(span:-abp-contains(View all)))
+! 2023-08-12 "Hide the footer in Twitter": https://github.com/dmitrii-fediuk/config/issues/3
+twitter.com##NAV[aria-label="Footer"]
 vc.ru##DIV[class="subsite-sidebar"]
 vedomosti.ru##HEADER
 vedomosti.ru##[class="article__metrics"]
