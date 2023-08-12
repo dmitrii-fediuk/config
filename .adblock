@@ -97,6 +97,8 @@ trends.rbc.ru##DIV[class="navbar js-navbar"]
 trendyol.com##[class*="head-custom-banner"]
 ! 2023-08-12 "Hide the «Who to follow» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/2
 twitter.com##ASIDE[aria-label="Who to follow"]
+! 2023-08-12 "Hide the footer in Twitter": https://github.com/dmitrii-fediuk/config/issues/3
+twitter.com##NAV[aria-label="Footer"]
 ! 2023-08-12 "Hide the «Trends for you» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/1
 twitter.com##SECTION[aria-labelledby="accessible-list-0"]
 vc.ru##DIV[class="subsite-sidebar"]
