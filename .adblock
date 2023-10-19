@@ -53,7 +53,7 @@ kaktus.media##DIV[class="Article--block-banner"]
 lalafo.kg##DIV[class="css-1upphps"]
 ! 2023-10-19 "Hide the «Additional resources» column from learn.microsoft.com":
 ! https://github.com/dmitrii-fediuk/config/issues/8
-learn.microsoft.com[id="ms--additional-resources"]
+learn.microsoft.com##[id="ms--additional-resources"]
 ! 2023-08-15 "Hide the «Go to top» sticky button from lexpera.com.tr": https://github.com/dmitrii-fediuk/config/issues/7
 lexpera.com.tr##[id="goToTopButton"]
 ! 2023-08-15 "Hide the right pane from lexpera.com.tr": https://github.com/dmitrii-fediuk/config/issues/5
