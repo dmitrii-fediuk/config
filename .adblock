@@ -105,7 +105,9 @@ tp-link.com##DIV[class="tp-banner"]
 tp-link.com##DIV[id="tp-home-new"]
 trends.rbc.ru##DIV[class="article__next-page js-news-next-el active"]
 trends.rbc.ru##DIV[class="navbar js-navbar"]
+! 2024-02-22 "Hide the topmost banner from trendyol.com": https://github.com/dmitrii-fediuk/config/issues/9
 trendyol.com##[class*="head-custom-banner"]
+trendyol.com##IMG[alt="alt=top-banner"]
 ! 2023-08-12
 ! 1) "Hide the «Who to follow» section in Twitter": https://github.com/dmitrii-fediuk/config/issues/2
 ! 2) Another solution: https://github.com/dmitrii-fediuk/config/blob/2023-08-12-1/.adblock#L98-L99
