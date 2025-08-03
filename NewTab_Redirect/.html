@@ -23,14 +23,13 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 				}
 				else {
 					let url = p;
-					if ('gemini' === p) {
-						url = 'https://gemini.google.com';
-					}
-					else {
-						const m = p.match(/^gemini:(\d+)$/);
-						if (m) {
-							url = `https://gemini.google.com/u/${m[1]}`;
-						}
+					// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+					// 1) https://g.co/gemini/share/6c66db99581c
+					// 2) https://g.co/gemini/share/b9c99aee6442
+					const m = p.match(/^gemini(?::(\d+))?$/);
+					if (m) {
+					   const u = m[1];
+					   url = `https://gemini.google.com${u ? `/u/${u}` : ''}`;
 					}
 					window.location.replace(url);
 				}
