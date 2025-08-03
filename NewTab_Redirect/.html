@@ -2,7 +2,8 @@
 1) "Violentmonkey userscripts do not run in Chrome tabs opened by the «NewTab Redirect!» extension":
 https://github.com/dmitrii-fediuk/config/issues/1
 2) "How did I force the Violentmonkey userscripts to run in a Chrome tab
-opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656 -->
+opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
+3) https://g.co/gemini/share/a3117147d580 -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,14 +11,26 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656 -->
 		<title>Redirect…</title>
 		<script>
 			(() => {
+				// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+				// https://g.co/gemini/share/042d913f12c0
 				const p = (new URLSearchParams(window.location.search)).get('p');
-				if (p) {
-					window.location.replace(p);
-				}
-				else {
+				if (!p) {
 					document.addEventListener('DOMContentLoaded', () => {
 						document.body.innerHTML = 'Specify `?p=<…>` in «NewTab Redirect!» settings';
 					});
+				}
+				else {
+					let url = p;
+					if ('gemini' === p) {
+						url = 'https://gemini.google.com';
+					}
+					else {
+						const m = p.match(/^gemini:(\d+)$/);
+						if (m) {
+							url = `https://gemini.google.com/u/${m[1]}`;
+						}
+					}
+					window.location.replace(url);
 				}
 			})();
 		</script>
