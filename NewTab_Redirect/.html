@@ -36,8 +36,10 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 						// https://g.co/gemini/share/1abfba276f04
 						const a = document.createElement('a');
 						a.href = url;
+						a.target = '_self';
 						document.body.appendChild(a);
-						a.click();
+						//a.click();
+						//window.location.assign(url);
 						//window.location.href = url;
 						//window.location.replace(url);
 					}, 1000);
