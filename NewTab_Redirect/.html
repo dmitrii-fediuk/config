@@ -31,7 +31,12 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 					   const u = m[1];
 					   url = `https://gemini.google.com${u ? `/u/${u}` : ''}`;
 					}
-					window.location.replace(url);
+					setTimeout(() => {
+						// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+						// https://g.co/gemini/share/1abfba276f04
+						window.location.href = url;
+						//window.location.replace(url);
+					}, 1000);
 				}
 			})();
 		</script>
