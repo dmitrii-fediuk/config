@@ -34,7 +34,11 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 					setTimeout(() => {
 						// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 						// https://g.co/gemini/share/1abfba276f04
-						window.location.href = url;
+						const a = document.createElement('a');
+						a.href = url;
+						document.body.appendChild(a);
+						a.click();
+						//window.location.href = url;
 						//window.location.replace(url);
 					}, 1000);
 				}
