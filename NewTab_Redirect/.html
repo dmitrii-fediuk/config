@@ -16,7 +16,9 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 				const p = (new URLSearchParams(window.location.search)).get('p');
 				if (!p) {
 					document.addEventListener('DOMContentLoaded', () => {
-						document.body.innerHTML = 'Specify `?p=<…>` in the «NewTab Redirect!» settings';
+						document.body.innerHTML =
+							'Add the `?p=<…>` parameter to the «Redirect URL» option in the «NewTab Redirect!» settings'
+						;
 					});
 				}
 				else {
