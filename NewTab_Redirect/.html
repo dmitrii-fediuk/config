@@ -31,18 +31,23 @@ opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656
 					   const u = m[1];
 					   url = `https://gemini.google.com${u ? `/u/${u}` : ''}`;
 					}
-					setTimeout(() => {
+					// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+					// https://g.co/gemini/share/495329615c57
+					const meta = document.createElement('meta');
+					meta.setAttribute('http-equiv', 'refresh');
+					meta.setAttribute('content', `0; url=${encodeURI(url)}`);
+					document.head.appendChild(meta);
+					/*setTimeout(() => {
 						// 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 						// https://g.co/gemini/share/1abfba276f04
 						const a = document.createElement('a');
 						a.href = url;
-						a.target = '_self';
 						document.body.appendChild(a);
-						//a.click();
+						a.click();
 						//window.location.assign(url);
 						//window.location.href = url;
 						//window.location.replace(url);
-					}, 1000);
+					}, 1000);*/
 				}
 			})();
 		</script>
