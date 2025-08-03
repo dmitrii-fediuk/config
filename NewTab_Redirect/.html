@@ -1,0 +1,26 @@
+<!-- 2025-08-03 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+1) "Violentmonkey userscripts do not run in Chrome tabs opened by the «NewTab Redirect!» extension":
+https://github.com/dmitrii-fediuk/config/issues/1
+2) "How did I force the Violentmonkey userscripts to run in a Chrome tab
+opened by the «NewTab Redirect!» extension?": https://df.tips/t/2656 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Redirect…</title>
+		<script>
+			(() => {
+				const p = (new URLSearchParams(window.location.search)).get('p');
+				if (p) {
+					window.location.replace(p);
+				}
+				else {
+					document.addEventListener('DOMContentLoaded', () => {
+						document.body.innerHTML = 'Specify `?p=<…>` in «NewTab Redirect!» settings';
+					});
+				}
+			})();
+		</script>
+	</head>
+	<body>Redirect…</body>
+</html>
